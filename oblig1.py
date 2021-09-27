@@ -9,6 +9,7 @@ url = "https://raw.githubusercontent.com/umaimehm/Intro_to_AI_2021/main/assignme
 df = pd.read_csv(url, sep=';')
 
 #df['Dato'].value_counts().sort_index().plot.bar()
+#plt.show()
 
 df['Avgangstid_p'] = pd.to_datetime(df.Tidspunkt_Planlagt_Ankomst_Holdeplass_Fra, errors='coerce')
 
@@ -25,5 +26,6 @@ df['Ledig'] = ledig
 df.plot.scatter(x='Linjenavn', y='Ledig', title='Graf')
 plt.show()
 
-print(df)
+df.head()
 
+#print(df)
